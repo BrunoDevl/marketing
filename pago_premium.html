@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago PayPal</title>
+    <link rel="stylesheet" href="style.css"> <!-- Asegúrate de vincular el archivo CSS adecuado si utilizas uno diferente -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Aquí puedes agregar el contenido del encabezado del índice -->
+        <a href="#" id="logo"><img src="images/logo.png" alt=""></a>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a> <!-- Modificación del enlace "Inicio" -->
+            <a href="#">Servicios</a>
+            <a href="#" id="precios">Precios</a>
+            <a href="#">Informacion</a>
+            <a href="#">Contactos</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-bar" class="fas fa-bars"></div>
+        </div>
+    </header>
+
+    <section class="payment-section">
+        <h1>Pagamento Paypal</h1>
+        
+        <div class="payment-info">
+            <p>Texto adicional sobre el pago</p>
+            <p>Otra información relacionada con el pago</p>
+        </div>
+        
+        <div class="divider-line"></div> <!-- Línea de división -->
+        
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="tu-cuenta-de-paypal@example.com">
+            <input type="hidden" name="item_name" value="Nombre del paquete">
+            <input type="hidden" name="amount" value="0.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit" class="payment-button">Pagar con PayPal</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Aquí puedes mantener cualquier otro script que necesites para esta página de pago
+        // ...
+    </script>
+</body>
+
+</html>
